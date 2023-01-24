@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array example</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <p id="demo"></p>
+    <h1>arrays of object</h1>
+    <p id="demo1"></p>
+    <script>
+        const cars = ["renault","volvo","bugati","honda"];
+        document.getElementById("demo").innerHTML=cars[3];
+        //arrays of objects
+        const cars2 =[
+            {
+                name:"maruti",
+                model:"ertiga"
+            },
+            {
+                name:"honda",
+                model:"city"
+            },
+            {
+                name:"mahindra",
+                model:"scorpio",
+                mfgdate:"jan 2019",
+                colorsAvailable:["red","black"]
+            }
+        ]
+        document.getElementById("demo1").innerHTML=` "car manufacturing date is:"${cars2[2].mfgdate}<br> "car color is:"${cars2[2].colorsAvailable+cars[0]}`;
+    </script>
+</body>
+</html>
