@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array input</title>
+    <link rel="stylesheet" href="arraysort.css">
+</head>
+<body style="background-color: lightslategray;">
+    <script>
+    values = [];
+
+function addRecord() {
+    
+  var inp = document.getElementById('inputtext');
+  values.push(inp.value);
+  
+  document.getElementById("values").innerHTML = values.join(".");
+  
+  inp.value = "";  
+  
+}
+function sortingElement(){
+values.sort(); 
+  document.getElementById("values").innerHTML = values.join(".");
+}
+function ClearPage(){
+    location.reload();
+}
+</script>
+
+                
+<div class="d1">
+ <input type="text" id="inputtext" />
+ <button type="button" id="add" onclick="addRecord();">Add </button>
+  <button type="button" id="display" onclick="sortingElement();">Sort</button>
+ <button type="button" id="display" onclick="ClearPage();">Clear</button>
+ <ul id="values"><li></li></ul>
+</div>
+
+</body>
+</html>
