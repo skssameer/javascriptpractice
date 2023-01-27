@@ -16,14 +16,14 @@ function addRecord() {
   var inp = document.getElementById('inputtext');
   values.push(inp.value);
   
-  document.getElementById("values").innerHTML = values.join(".");
+  document.getElementById("values").innerHTML = values;
   
   inp.value = "";  
   
 }
 function sortingElement(){
 values.sort(); 
-  document.getElementById("values").innerHTML = values.join(".");
+  document.getElementById("values").innerHTML = values;
 }
 function ClearPage(){
     location.reload();
@@ -36,7 +36,7 @@ function ClearPage(){
  <button type="button" id="add" onclick="addRecord();">Add </button>
   <button type="button" id="display" onclick="sortingElement();">Sort</button>
  <button type="button" id="display" onclick="ClearPage();">Clear</button>
- <ul id="values"><li></li></ul>
+ <p id="values"></p>
 </div>
 
 </body>

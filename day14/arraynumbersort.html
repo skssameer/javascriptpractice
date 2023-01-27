@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number sort</title>
+</head>
+<body>
+    <h1>array number sort</h1>
+    <p id="demo"></p>
+    <h1>sorting an array in random order</h1>
+<button onclick="myfunction();">try it</button>
+    <p id="demo1"></p>
+<script>
+        const numArray =[6,5,8,9,7,2];
+        const numArray1 =[6,5,8,9,7,2];
+
+        //numArray.sort();
+        numArray.sort(function (a,b){
+            return a-b;
+        });
+            function myfunction(){
+            numArray1.sort(function(){return 0.5 - Math.random()});
+            document.getElementById("demo1").innerHTML=numArray1.join(".")
+
+            }
+
+
+        
+        document.getElementById("demo").innerHTML=numArray.join(".")
+
+    </script>
+</body>
+</html>

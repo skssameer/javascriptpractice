@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array methods</h1>
+    <p id="demo2"></p>
+    <h1>using math.max in array</h1>
+    <p id="demo"></p>
+    <h1>using math.min in array</h1>
+    <p id="demo1"></p>
+    <script>
+        const numArray=[2,5,4,50,60,21,100];
+        document.getElementById("demo2").innerHTML=numArray;
+
+        document.getElementById("demo").innerHTML=myArrayMax(numArray);
+        document.getElementById("demo1").innerHTML=myArrayMin(numArray);
+
+
+        function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+    </script>
+</body>
+</html>
