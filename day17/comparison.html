@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comparison example</title>
+</head>
+<body>
+    <input type="" id="ageid" placeholder="Enter your age">
+    <button onclick="validate();">Vote</button>
+    <p id="demo"></p>
+    <script>
+        const ageElimentInput = document.getElementById("ageid");
+        const paragraphEliment = document.getElementById("demo");
+        function validate(){
+            console.log("value of input::", ageElimentInput);
+           // if(ageElimentInput.value >18){
+             //   paragraphEliment.innerHTML = "Great! you are eligible to vote";
+            
+                    
+              //  }
+              //  else{
+                 //   paragraphEliment.innerHTML ="You are not eligible to vote";
+              //  }
+              if(isNaN (ageElimentInput.value))
+                {
+                    paragraphEliment.innerHTML = "invalid input";  
+                }
+                else{
+                paragraphEliment.innerHTML = (ageElimentInput.value >18) 
+                ? "Great! you are eligible to vote re"
+                :"you are not eligible to vote re";
+                }
+
+
+        }
+
+    </script>
+</body>
+</html>
