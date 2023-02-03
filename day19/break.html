@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break statement</title>
+</head>
+<body>
+   <h1>The use of Break statement</h1>
+   
+    <p>we have set the condition as i=0;i<=10;i++<br>
+    the loop will stop executing of block when i=3</p>
+   <p id="demo"></p>
+   <h1>the use of continue statement</h1>
+   <p>we have set the condition as i=0;i<=10;i++<br>
+    the loop will skip the executionof code  when i=3 and continue after it</p>
+   <p id="demo1"></p>
+   <script>
+    let text = "";
+    let i = 0;
+    for(i=0;i<=10;i++){
+        if(i===3){break;}
+        text += "the number is:" +i +"<br>";
+
+    }
+    document.getElementById("demo").innerHTML=text;
+    let text1 = "";
+    let j = 0;
+    for(j=0;j<=10;j++){
+        if(j===3){continue;}
+        text1 += "the number is:" +j +"<br>";
+
+    }
+    document.getElementById("demo1").innerHTML=text1;
+   </script> 
+</body>
+</html>

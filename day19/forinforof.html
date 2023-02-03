@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForinForof</title>
+</head>
+<body>
+    <h2>this is a example for Forin loop</h2>
+    <p id="demo"></p>
+    <h2>this is a example of Forof loop</h2>
+    <p id="demo1"></p>
+    <h2>The for of statement loops through the values of an iterable object.</h2>
+    <p id="demo2"></p>
+
+
+    <script>
+        let cars= ["bmw","volvo","maruti","honda"];
+        let text="";
+        for(let x in cars){
+            text += cars[x]+"<br>"
+        }
+        document.getElementById("demo").innerHTML=text;
+        let fruits =["apple","mango","orange"];
+        let txt="";
+        for(let y of fruits){
+            txt += y+"<br>";
+        }
+        document.getElementById("demo1").innerHTML=txt;
+        let language = "JavaScript";
+
+        let text1 = "";
+        for (let x1 of language) {
+         text1 += x1 + "<br>";
+        }
+
+        document.getElementById("demo2").innerHTML = text1;
+
+    </script>
+</body>
+</html>
