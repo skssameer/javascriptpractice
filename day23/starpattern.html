@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>starpattern</title>
+</head>
+<body>
+    <h1>star triangle pattern</h1>
+    <input type="" name="" id="inp1">
+    <button onclick="myfunction()">click to get pattern</button>
+    <p id="demo" , style="color: rgb(104, 25, 231);"></p>
+    <script>
+        function myfunction(){
+
+       
+        let string = "";
+        let n = Number(document.getElementById("inp1").value);
+        for(let i=1;i<=n;i++){
+            for(let j=n; j>i; j--){
+                string += " ";
+            }
+            for(let k=0; k<i*2-1; k++){
+                string += "*";
+            }
+            string += "<br>";
+        }
+        document.getElementById("demo").innerHTML=`<pre>${string}</pre>`;
+
+    }
+
+    </script>
+</body>
+</html>
