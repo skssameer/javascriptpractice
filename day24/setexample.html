@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setexample</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        const num = new Set(["1","3","3","3"]);
+        const letter = new Set(["a","b","b"]);
+        const uniqnumbers = [...new Set (num)];
+        //let text = "";
+       // letters.forEach( function (value){
+       //     text += value +"<br>";
+       // })
+       document.getElementById("demo").innerHTML = uniqnumbers;
+       // Create a Set
+const letters = new Set(["a","b","c"]);
+
+// List all Elements
+let text = "";
+letters.forEach (function(value) {
+  text += value + "<br>";
+})
+
+document.getElementById("demo1").innerHTML = text;
+
+    </script>
+</body>
+</html>
