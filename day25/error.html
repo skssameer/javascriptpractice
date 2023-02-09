@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+   <input type="text" name="" id="inp1">
+   <button onclick="myfunction()"> handle error</button> 
+   <p id="demo"></p>
+   <script>
+    function myfunction(){
+        const message = document.getElementById("demo");
+        message.innerHTML = "";
+        let x = document.getElementById("inp1").value;
+        try{
+            if(x.trim()=="") throw "empty";
+            if(isNaN(x)) throw "not a number";
+            x = Number(x)
+            if(x<5) throw "too low";
+            if(x>10) throw "too high";
+        }
+        catch(err){
+            message.innerHTML = "the input is " +err;
+        }
+        finally {
+    document.getElementById("demo").value = +message;
+  }
+
+    }
+   </script>
+</body>
+</html>
