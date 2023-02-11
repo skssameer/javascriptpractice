@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes example 2</title>
+</head>
+<body>
+    <h1>the use of classes in JavaScript</h1>
+    <p id="demo"></p>
+    <script>
+        class car {
+            constructor(name,year){
+                this.name = name;
+                this.year = year;
+            }
+            age(){
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        let newCar = new car("toyota",2019);
+        document.getElementById("demo").innerHTML = "my car is " + newCar.age() + " years old";
+</script>
+</body>
+</html>
